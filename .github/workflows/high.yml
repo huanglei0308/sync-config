@@ -7,7 +7,7 @@ on:
     paths:
     - '.github/workflows/**'
   schedule:
-    # Runs every 2 hours, starting at 01:00.
+    # Runs every 1 hours, starting at 01:00.
     - cron:  '0 1/2 * * *'
 
 jobs:
@@ -29,3 +29,5 @@ jobs:
         force_update: true
         debug: true
         static_list: "stratovirt"
+      env:
+        PIP_BREAK_SYSTEM_PACKAGES: 1 
